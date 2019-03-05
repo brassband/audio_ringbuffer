@@ -72,7 +72,7 @@ int main() {
 	pthread_join(readerthread, NULL);
 	pthread_join(writerthread, NULL);
 
-	printf("HEJ\n");
+	printf("HEJ!\n");
 
 	return 0;
 }
