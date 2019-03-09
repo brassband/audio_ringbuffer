@@ -6,8 +6,8 @@
 #include <pthread.h>
 #include <semaphore.h>
 
-int init_ringbuffer(int n);
-void enqueue(float value);
+int init_ringbuffer(const int n);
+void enqueue(const float value);
 float dequeue();
 void deinit_ringbuffer();
 

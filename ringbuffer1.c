@@ -8,7 +8,7 @@ static float * buffer;
 static int in, out;
 static int bufferSize;
 
-int init_ringbuffer(int n) {
+int init_ringbuffer(const int n) {
 	in = 0;
 	out = 0;
 	bufferSize = n;
@@ -35,7 +35,7 @@ int init_ringbuffer(int n) {
 	return 0;
 }
 
-void enqueue(float value) {
+void enqueue(const float value) {
 	sem_wait(&semspace);		// check that there is space in the ringbuffer to write another number
 	pthread_mutex_lock(&lock);	// lock the resourse
 	buffer[in++] = value;
